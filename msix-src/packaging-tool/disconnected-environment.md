@@ -37,6 +37,10 @@ If you are in an enterprise environment with Windows Server Update Services (WSU
 - Download the FOD .cab file for [Windows 10, version 2004, x64](https://download.microsoft.com/download/4/c/7/4c79bf31-946c-444a-bc5f-61398d3b0a76/Msix-PackagingTool-Driver-Package~31bf3856ad364e35~amd64~~.cab) **NOTE: This will also work for later Windows 10 versions**
 - Individually-obtained Feature on Demand (FOD) packages can be installed using [DISM command-line options](/windows-hardware/manufacture/desktop/dism-operating-system-package-servicing-command-line-options). In an elevated PowerShell window type: ```Dism /Online /add-package /packagepath:(path)```
 
+  > [!NOTE]
+  > Installation may fail. If this happens be sure the downloaded file and the package name are similar.
+  > Download may have altered the file name by replacing `~` by `-`, which will make the installation fail.
+
 IT admins can also create [Side by side feature store (shared folder)](/windows-server/administration/server-manager/configure-features-on-demand-in-windows-server) to allow access to the MSIX Packaging tool driver FOD. You can find additional details at the bottom of this [blog post](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Language-pack-acquisition-and-retention-for-enterprise-devices/ba-p/275404).
 
 Otherwise, if you have access to enterprise or OEM channels you can obtain the driver from Windows 10 Features on Demand media from one of the following sources:
